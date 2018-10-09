@@ -2,4 +2,5 @@
   # tag
 
 # Create an empty list to append results into
-Get-InfrastructureType 
+$return = Get-InfrastructureType | Out-String
+Out-File -Encoding Ascii -FilePath $res -inputObject $return
