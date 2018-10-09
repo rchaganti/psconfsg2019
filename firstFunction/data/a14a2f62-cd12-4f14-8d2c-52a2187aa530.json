@@ -1,0 +1,12 @@
+{
+    "name" : "ROBO",
+    "id" : "a14a2f62-cd12-4f14-8d2c-52a2187aa530",
+    "parentId" : "434fff62-5d25-497d-b9a6-b2e8ea0e428c",
+    "description" : "Storage Spaces Direct HCI cluster that is 2 nodes back to back connected only.",
+    "hostNetwork" : [
+        {
+            "name" : "Non-Converged Network",
+            "Id" : "ec84c634-38c9-410e-8ee9-2390c0d0541e"
+        }
+    ]
+}
