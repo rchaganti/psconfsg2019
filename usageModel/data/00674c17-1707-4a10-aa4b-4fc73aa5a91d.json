@@ -1,0 +1,16 @@
+{
+    "name" : "Scalable",
+    "id" : "00674c17-1707-4a10-aa4b-4fc73aa5a91d",
+    "parentId" : "434fff62-5d25-497d-b9a6-b2e8ea0e428c",
+    "description" : "Storage Spaces Direct HCI cluster that can be scaled from 2-16 nodes.",
+    "hostNetwork" : [
+        {
+            "name" : "Non-Converged Network",
+            "id" : "0c6393bd-33d8-419f-9361-0f2435e12a60"
+        },
+        {
+            "name" : "Fully-Converged",
+            "id" : "399097c1-58aa-4d89-ba40-84f2f02dd925"
+        }
+    ]
+}
