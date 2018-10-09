@@ -1,0 +1,16 @@
+{
+    "name" : "Disaggregated Storage",
+    "id" : "2bd40af1-f348-4640-b409-eb9f5c599294",
+    "parentId" : "4821b61d-1536-4ead-a5a4-e190d6ce750c",
+    "description" : "Storage Spaces Direct used as disaggregated storage cluster.",
+    "deploymentModel" : [
+        {
+            "name" : "ROBO",
+            "Id" : "a60169a2-d3ed-41e8-b05f-59b68a2d7fe9"
+        },
+        {
+            "name" : "Scalable",
+            "Id" : "695dcbae-eba0-498b-91ee-16a22cb6f67c"
+        }
+    ]
+}

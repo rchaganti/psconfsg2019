@@ -1,0 +1,135 @@
+{
+    "description" : "Deployment tasks for different deployment models for S2D.",
+    "tasks" : [
+        {
+            "id" : "a7c78b10-ae95-4130-b453-2f39514acbb3",
+            "name" : "Install Roles and Features",
+            "requiresRestart" : false,
+            "parameters" : [
+                {
+                    "name" : "Name",
+                    "value" : [
+                        "Hyper-V",
+                        "Failover-Clustering"
+                    ],
+                    "type" : "string"
+                }
+            ],
+            "scriptPath" : "/assets/scripts/hci/common/iWarpInstallRolesFeatures.ps1"
+        },       
+        {
+            "id" : "d89d1158-084a-409d-8a0f-85a3940418ec",
+            "name" : "Install Roles and Features",
+            "requiresRestart" : false,
+            "parameters" : [
+                {
+                    "name" : "Name",
+                    "value" : [
+                        "Hyper-V",
+                        "Failover-Clustering",
+                        "Data-Center-Bridging"
+                    ],
+                    "type" : "string"
+                }
+            ],
+            "scriptPath" : "/assets/scripts/hci/common/roceInstallRolesFeatures.ps1"
+        },
+        {
+            "id" : "462da20a-1172-4f06-90f9-2505ec2fa3cf",
+            "name" : "Change Timezone",
+            "requiresRestart" : false,
+            "parameters" : [
+                {
+                    "name" : "Name",
+                    "value" : "prompt",
+                    "type"  : "string"
+                }
+            ],
+            "scriptPath" : "/assets/scripts/common/changeTimezone.ps1"
+        },
+        {
+            "id" : "d7bfa71e-c395-4ecc-84c9-5cfea256c114",
+            "name" : "Enable Remote Desktop",
+            "requiresRestart" : false,
+            "parameters" : [],
+            "scriptPath" : "/assets/scripts/common/enableRemoteDesktop.ps1"
+        },
+        {
+            "id" : "b830b13c-af08-4390-a8c5-b0b17a82b8b4",
+            "name" : "Host Network Configuration",
+            "requiresRestart" : false,
+            "parameters" : [],
+            "scriptPath" : "/assets/scripts/hci/fully-converged/hostNetwork.ps1"
+        },
+        {
+            "id" : "3d804310-14f4-4fd3-b10c-5bb0651b3d74",
+            "name" : "Host Network Configuration",
+            "requiresRestart" : false,
+            "parameters" : [],
+            "scriptPath" : "/assets/scripts/hci/non-converged/hostNetwork.ps1"
+        },
+        {
+            "id" : "eb8c796b-677e-4cad-b06b-2e97c3b6a54a",
+            "name" : "RDMA Configuration",
+            "requiresRestart" : false,
+            "parameters" : [],
+            "scriptPath" : "/assets/scripts/hci/common/iWarpRdmaConfiguration.ps1"
+        },
+        {
+            "id" : "1968f215-6422-4fd1-9299-d9083be96dc5",
+            "name" : "RDMA Configuration",
+            "requiresRestart" : false,
+            "parameters" : [],
+            "scriptPath" : "/assets/scripts/hci/common/roceRdmaConfiguration.ps1"
+        },
+        {
+            "id" : "741d93e5-d410-4ff0-97e5-70e36a53d405",
+            "name" : "QoS Configuration",
+            "requiresRestart" : false,
+            "parameters" : [],
+            "scriptPath" : "/assets/scripts/hci/common/qosConfiguration.ps1"
+        },
+        {
+            "id" : "92ba1353-957c-4844-a13c-adb9c81be4d8",
+            "name" : "Change hostname",
+            "requiresRestart" : true,
+            "parameters" : [],
+            "scriptPath" : "/assets/scripts/common/changeHostName.ps1"
+        },
+        {
+            "id" : "8e940f31-b9a0-4cf4-acaf-88f9107a30a6",
+            "name" : "Domain Join",
+            "requiresRestart" : true,
+            "parameters" : [],
+            "scriptPath" : "/assets/scripts/common/domainJoin.ps1"
+        },
+        {
+            "id" : "55d98b71-66ce-4886-9220-595607490316",
+            "name" : "Test Cluster Creation Readiness",
+            "requiresRestart" : false,
+            "parameters" : [],
+            "scriptPath" : "/assets/scripts/common/testCluster.ps1"
+        },
+        {
+            "id" : "1ddd151c-b6b4-4ad3-9c6b-8808dc347312",
+            "name" : "Create Cluster",
+            "requiresRestart" : false,
+            "parameters" : [],
+            "scriptPath" : "/assets/scripts/common/createCluster.ps1"
+        },
+        {
+            "id" : "b92d35e1-0f49-4ec9-9b29-45ccd1e8092f",
+            "name" : "Add Cluster Node",
+            "requiresRestart" : false,
+            "parameters" : [],
+            "scriptPath" : "/assets/scripts/common/addClusterNode.ps1"
+        },
+        {
+            "id" : "3e4a53a6-089d-4bca-90c1-29c59032251e",
+            "name" : "Enable Cluster S2D",
+            "requiresRestart" : false,
+            "parameters" : [],
+            "scriptPath" : "/assets/scripts/common/enableS2D.ps1"
+        }
+    ]
+}

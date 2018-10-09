@@ -1,0 +1,16 @@
+{
+    "name" : "Fully-Converged Network",
+    "id" : "399097c1-58aa-4d89-ba40-84f2f02dd925",
+    "parentId" : "00674c17-1707-4a10-aa4b-4fc73aa5a91d",
+    "description" : "Fully-Converged network configuration for a scalable S2D HCI cluster.",
+    "rdma" : [
+        {
+            "name" : "iWarp",
+            "id" : "31b46b6c-cb49-4465-95b3-bc261080713b"
+        },
+        {
+            "name" : "RoCE",
+            "id" : "f6731f15-c762-48c8-8666-f3d7c8ceb4c5"
+        }
+    ]    
+}

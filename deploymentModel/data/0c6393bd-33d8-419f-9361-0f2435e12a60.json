@@ -1,0 +1,16 @@
+{
+    "name" : "Non-Converged Network",
+    "id" : "0c6393bd-33d8-419f-9361-0f2435e12a60",
+    "parentId" : "00674c17-1707-4a10-aa4b-4fc73aa5a91d",
+    "description" : "Non-converged network configuration for a scalable S2D HCI cluster.",
+    "rdma" : [
+        {
+            "name" : "iWarp",
+            "id" : "a90a4e30-19f1-47cd-a77b-4a859b491090"
+        },
+        {
+            "name" : "RoCE",
+            "id" : "b60e9067-d2cd-414a-b115-0c41534c4871"
+        }
+    ]
+}

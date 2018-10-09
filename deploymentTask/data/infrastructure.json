@@ -1,0 +1,19 @@
+{
+    "infrastructureType" : [
+        {
+            "name" : "Microsoft Storage Spaces Direct",
+            "Id" : "4821b61d-1536-4ead-a5a4-e190d6ce750c",
+            "description" : "Storage Spaces Direct uses industry-standard servers with local-attached drives to create highly available, highly scalable software-defined storage at a fraction of the cost of traditional SAN or NAS arrays. Its converged or hyper-converged architecture radically simplifies procurement and deployment, while features such as caching, storage tiers, and erasure coding, together with the latest hardware innovations such as RDMA networking and NVMe drives, deliver unrivaled efficiency and performance.",
+            "usageModel" : [
+                {
+                    "name" : "Hyper-Converged Infrastructure",
+                    "id" : "434fff62-5d25-497d-b9a6-b2e8ea0e428c"
+                },
+                {
+                    "name" : "Disaggregated Storage",
+                    "id" : "2bd40af1-f348-4640-b409-eb9f5c599294"
+                }
+            ]
+        }
+    ]
+}

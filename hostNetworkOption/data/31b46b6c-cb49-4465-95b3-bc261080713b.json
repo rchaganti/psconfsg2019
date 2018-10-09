@@ -1,0 +1,108 @@
+{
+    "name" : "iWarp",
+    "id" : "31b46b6c-cb49-4465-95b3-bc261080713b",
+    "parentId" : "399097c1-58aa-4d89-ba40-84f2f02dd925",
+    "description" : "iWarp for RDMA for fully-converged network in the scalable deployment model.",
+    "deploymentTasks" : [
+        {
+            "name" : "Install Roles and Features",
+            "description" : "Install necessary roles and features for S2D scalable HCI cluster.",
+            "id" : "a7c78b10-ae95-4130-b453-2f39514acbb3",
+            "runOn" : "AllNodes",
+            "dependsOn" : [
+
+            ]
+        },
+        {
+            "name" : "Change timezone",
+            "description" : "Change time zone on the cluster node",
+            "id" : "462da20a-1172-4f06-90f9-2505ec2fa3cf",
+            "runOn" : "AllNodes",
+            "dependsOn" : [
+
+            ]
+        }, 
+        {
+            "name" : "Enable Remote Desktop",
+            "description" : "Enable remote desktop for administration",
+            "id" : "d7bfa71e-c395-4ecc-84c9-5cfea256c114",
+            "runOn" : "AllNodes",
+            "dependsOn" : [
+
+            ]
+        },               
+        {
+            "name" : "Host Network Configuration",
+            "description" : "Fully-converged Host and storage network configuration.",
+            "id" : "b830b13c-af08-4390-a8c5-b0b17a82b8b4",
+            "runOn" : "AllNodes",
+            "dependsOn" : [
+                "a7c78b10-ae95-4130-b453-2f39514acbb3"
+            ]
+        },
+        {
+            "name" : "RDMA Configuration",
+            "description" : "RDMA Configuration for iWarp based Storage NICs.",
+            "id" : "eb8c796b-677e-4cad-b06b-2e97c3b6a54a",
+            "runOn" : "AllNodes",
+            "dependsOn" : [
+                "b830b13c-af08-4390-a8c5-b0b17a82b8b4"
+            ]
+        },
+        {
+            "name" : "Change hostname",
+            "description" : "Change hostname of cluster nodes.",
+            "id" : "92ba1353-957c-4844-a13c-adb9c81be4d8",
+            "runOn" : "AllNodes",
+            "dependsOn" : [
+                "b830b13c-af08-4390-a8c5-b0b17a82b8b4"
+            ]
+        },        
+        {
+            "name" : "Domain Join",
+            "description" : "Domain Joining of cluster nodes.",
+            "id" : "8e940f31-b9a0-4cf4-acaf-88f9107a30a6",
+            "runOn" : "AllNodes",
+            "dependsOn" : [
+                "b830b13c-af08-4390-a8c5-b0b17a82b8b4"
+            ]
+        },
+        {
+            "name" : "Test Cluster Creation Readiness",
+            "description" : "Test for Failover Cluster creation readiness.",
+            "id" : "55d98b71-66ce-4886-9220-595607490316",
+            "runOn" : "primaryNode",
+            "dependsOn" : [
+                "8e940f31-b9a0-4cf4-acaf-88f9107a30a6"
+            ]
+        },
+        {
+            "name" : "Create Cluster",
+            "description" : "Create Failover Cluster.",
+            "id" : "1ddd151c-b6b4-4ad3-9c6b-8808dc347312",
+            "runOn" : "primaryNode",
+            "dependsOn" : [
+                "55d98b71-66ce-4886-9220-595607490316"
+            ]
+        },
+        {
+            "name" : "Add Cluster Node",
+            "description" : "Add rest of the nodes to Failover Cluster.",
+            "id" : "b92d35e1-0f49-4ec9-9b29-45ccd1e8092f",
+            "runOn" : "remainingNodes",
+            "dependsOn" : [
+                "8e940f31-b9a0-4cf4-acaf-88f9107a30a6",
+                "1ddd151c-b6b4-4ad3-9c6b-8808dc347312"
+            ]
+        },
+        {
+            "name" : "Enable Cluster S2D",
+            "description" : "Enable Storage Spaces Direct",
+            "id" : "3e4a53a6-089d-4bca-90c1-29c59032251e",
+            "runOn" : "primaryNode",
+            "dependsOn" : [
+                "b92d35e1-0f49-4ec9-9b29-45ccd1e8092f"
+            ]
+        }        
+    ]
+}

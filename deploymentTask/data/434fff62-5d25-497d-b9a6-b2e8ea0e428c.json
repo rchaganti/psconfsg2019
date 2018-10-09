@@ -1,0 +1,16 @@
+{
+    "name" : "Hyper-Converged Infrastructure",
+    "id" : "434fff62-5d25-497d-b9a6-b2e8ea0e428c",
+    "parentId" : "4821b61d-1536-4ead-a5a4-e190d6ce750c",
+    "description" : "Storage Spaces Direct used as Hyper-Converged Infrastructure cluster.",
+    "deploymentModel" : [
+        {
+            "name" : "ROBO",
+            "Id" : "a14a2f62-cd12-4f14-8d2c-52a2187aa530"
+        },
+        {
+            "name" : "Scalable",
+            "Id" : "00674c17-1707-4a10-aa4b-4fc73aa5a91d"
+        }
+    ]
+}
