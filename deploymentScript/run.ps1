@@ -1,6 +1,10 @@
-# Supported query parameters:
-  # tag
+$parameters = @{
+    InfrastructureType = $req_query_infrastructureType
+    UsageModel = $re_query_usageModel
+    DeploymentModel = $reg_query_deploymentModel
+    HostNetwork = $reg_query_hostNetwork
+    RdmaOption = $reg_query_rdmaOption
+}
 
-# Create an empty list to append results into
-$return = Get-InfrastructureUsageModel -InfrastructureType $req_query_infrastructureType | ConvertTo-Json | Out-String
+$return = Get-InfrastructureDeploymentScript @parameters | ConvertTo-Json | Out-String
 Out-File -Encoding Ascii -FilePath $res -inputObject $return
