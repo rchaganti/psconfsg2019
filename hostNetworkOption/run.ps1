@@ -1,6 +1,6 @@
 $parameters = @{
     InfrastructureType = $req_query_infrastructureType
-    UsageModel = $re_query_usageModel
+    UsageModel = $reg_query_usageModel
     DeploymentModel = $reg_query_deploymentModel
 }
 
